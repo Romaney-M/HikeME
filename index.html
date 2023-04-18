@@ -1,82 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <!-- curl -H 'X-Api-Key:'MNJumTqMuNY0igarIiSXmJBHSmFPcL0FajFPRD0a'https://developer.nps.gov/api/v1/parks?parkCode=acad' -->
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>HikeME</title>
 </head>
-<body>
-        <h1 class="column has-background-success has-text-weight-bold is-size-1 has-text-centered has-text-white">HikeME</h1>
-    <div class="columns">    
-      <div class="column is-two-fifths has-background-primary has-text-centered is-size-3">
-        Weather
-      </div>
 
-      <div class="column has-background-warning has-text-centered is-size-3">
-        Map
+<body>
+  <h1 class="column has-background-success has-text-weight-bold is-size-1 has-text-centered has-text-white">HikeME</h1>
+  <div class="columns">
+    <div class="column is-two-fifths has-background-primary has-text-centered is-size-3">
+      Weather
+    </div>
+
+    <div class="column has-background-warning has-text-centered is-size-3">
+      Map
+    </div>
+  </div>
+  <div class="column is-4 is-offset-5">
+    <div class="options select is-danger is-rounded">
+      <select class="stateInput">
+        <option disabled selected hidden>Pick your state</option>
+        <option>Alabama</option>
+        <option>Alaska</option>
+        <option>Arizona</option>
+        <option>Arkansas</option>
+        <option>California</option>
+        <option>Colorado</option>
+        <option>Connecticut</option>
+        <option>Delaware</option>
+        <option>Florida</option>
+        <option>Georgia</option>
+        <option>Guam</option>
+        <option>Hawaii</option>
+        <option>Idaho</option>
+        <option>Illinois</option>
+        <option>Indiana</option>
+        <option>Iowa</option>
+        <option>Kansas</option>
+        <option>Kentucky</option>
+        <option>Louisiana</option>
+        <option>Maine</option>
+        <option>Maryland</option>
+        <option>Massachusetts</option>
+        <option>Michigan</option>
+        <option>Minnesota</option>
+        <option>Mississippi</option>
+        <option>Missouri</option>
+        <option>Montana</option>
+        <option>Nebraska</option>
+        <option>Nevada</option>
+        <option>New Hampshire</option>
+        <option>New Jersey</option>
+        <option>New Mexico</option>
+        <option>New York</option>
+        <option>North Carolina</option>
+        <option>North Dakota</option>
+        <option>Ohio</option>
+        <option>Oklahoma</option>
+        <option>Oregon</option>
+        <option>Pennsylvania</option>
+        <option>Rhode Island</option>
+        <option>South Carolina</option>
+        <option>South Dakota</option>
+        <option>Tennessee</option>
+        <option>Texas</option>
+        <option>Utah</option>
+        <option>Vermont</option>
+        <option>Virginia</option>
+        <option>Washington</option>
+        <option>West Virginia</option>
+        <option>Wisconsin</option>
+        <option>Wyoming</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="weather">
+      <img src="/assets/images/weatherImages/Atomosphere.png" alt="weather icon" class="weatherIcon">
+      <h1 class="temp">°F</h1>
+      <h2 class="state">State Name</h2>
+      <div class="details">
+        <div class="col">
+          <img src="/assets/images/weatherImages/Humidity.png" alt="test">
+          <div>
+            <p class="humidity">%</p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="col">
+          <img src="/assets/images/weatherImages/Wind.png" alt="test">
+          <div>
+            <p class="wind">mph</p>
+            <p>Wind Speed</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="column is-4 is-offset-5">
-      <div class="select is-danger is-rounded">
-        <select>
-          <option>Pick your state</option>
-          <option>AL</option>
-          <option>AK</option>
-          <option>AZ</option>
-          <option>AR</option>
-          <option>AS</option>
-          <option>CA</option>
-          <option>CO</option>
-          <option>CT</option>
-          <option>DE</option>
-          <option>DC</option>
-          <option>FL</option>
-          <option>GA</option>
-          <option>HI</option>
-          <option>ID</option>
-          <option>IL</option>
-          <option>IN</option>
-          <option>IA</option>
-          <option>KS</option>
-          <option>KY</option>
-          <option>LA</option>
-          <option>ME</option>
-          <option>MD</option>
-          <option>MA</option>
-          <option>MI</option>
-          <option>MN</option>
-          <option>MS</option>
-          <option>MO</option>
-          <option>MT</option>
-          <option>NE</option>
-          <option>NV</option>
-          <option>NH</option>
-          <option>NJ</option>
-          <option>NM</option>
-          <option>NY</option>
-          <option>NC</option>
-          <option>NC</option>
-          <option>OH</option>
-          <option>OK</option>
-          <option>OR</option>
-          <option>PA</option>
-          <option>RI</option>
-          <option>SC</option>
-          <option>SD</option>
-          <option>TN</option>
-          <option>TX</option>
-          <option>UT</option>
-          <option>VT</option>
-          <option>VA</option>
-          <option>WA</option>
-          <option>WV</option>
-          <option>WI</option>
-          <option>WY</option>
-        </select>
-      </div>
-    </div>
+
+    <script src="/assets/js/weatherScript.js"></script>
 </body>
 </html>
