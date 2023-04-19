@@ -51,6 +51,7 @@ async function checkWeather(state) {
         }
         
     }*/
+    document.querySelector(".card").style.display="block";
 }
 
 inputOption.addEventListener("change", function (event) {
