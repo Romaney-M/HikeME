@@ -81,23 +81,23 @@
     </div>
   </div>
 
-  <div class="card">
+  <div class="card py-6 px-4 has-text-centered">
     <div class="weather">
       <img src="/assets/images/weatherImages/Atomosphere.png" alt="weather icon" class="weatherIcon">
-      <h1 class="temp">°F</h1>
-      <h2 class="state">State Name</h2>
-      <div class="details">
-        <div class="col">
-          <img src="/assets/images/weatherImages/Humidity.png" alt="test">
+      <h1 class="temp has-text-weight-bold is-size-3-mobile is-size-1-desktop">°F</h1>
+      <h2 class="state is-size-2-desktop has-text-weight-bold">State Name</h2>
+      <div class="details columns is-flex-direction-row is-justify-content-space-between is-align-content-center mt-5 px-5">
+        <div class="sub column has-text-left has-text-centered">
+          <img src="/assets/images/weatherImages/Humidity.png" alt="test" class="mr-1 has-text-centered">
           <div>
-            <p class="humidity">%</p>
+            <p class="humidity mt-0 is-size-4">%</p>
             <p>Humidity</p>
           </div>
         </div>
-        <div class="col">
-          <img src="/assets/images/weatherImages/Wind.png" alt="test">
+        <div class="sub column has-text-left has-text-centered">
+          <img src="/assets/images/weatherImages/Wind.png" alt="test" class="mr-1 has-text-centered">
           <div>
-            <p class="wind">mph</p>
+            <p class="wind mt-0 is-size-4">mph</p>
             <p>Wind Speed</p>
           </div>
         </div>
@@ -107,4 +107,5 @@
     <script src="/assets/js/weatherScript.js"></script>
     <script src="./assets/js/NPSScript.js"></script>
 </body>
+
 </html>
