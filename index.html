@@ -8,21 +8,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <!-- curl -H 'X-Api-Key:'MNJumTqMuNY0igarIiSXmJBHSmFPcL0FajFPRD0a'https://developer.nps.gov/api/v1/parks?parkCode=acad' -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/png" href="./assets/images/HikeMeIcon.png">
   <title>HikeME</title>
 </head>
 
 <body>
-  <h1 class="column has-background-success has-text-weight-bold is-size-1 has-text-centered has-text-white">HikeME</h1>
-  <div class="columns">
-    <div class="column is-two-fifths has-background-primary has-text-centered is-size-3">
-      Weather
+    <h1 class="column has-background-success has-text-weight-bold is-size-1 has-text-centered has-text-white">✨ HikeME ✨</h1>
+  <div class="columns is-mobile has-text-centered">
+    <div class="subTitle column is-two-fifths has-background-primary has-text-centered is-size-3" id="weather">
+      🌈 Weather
     </div>
 
-    <div class="column has-background-warning has-text-centered is-size-3">
-      Map
+    <div class="subTitle column has-background-warning has-text-centered is-size-3" id="map">
+      Map 🗺️
     </div>
   </div>
+<<<<<<< HEAD
   <div class="columns">
+=======
+  <div class="column has-text-centered">
+>>>>>>> 3ba5a43f86c4db9cdf57a12523f2cc12af5eb418
     <div class="options select is-danger is-rounded">
       <select class="stateInput">
         <option disabled selected hidden>Pick your state</option>
@@ -81,24 +86,29 @@
     </div>
   
 
+<<<<<<< HEAD
   <div class="columns">
   <div class="card">
+=======
+  <div class="card py-6 px-4 has-text-centered">
+>>>>>>> 3ba5a43f86c4db9cdf57a12523f2cc12af5eb418
     <div class="weather">
       <img src="/assets/images/weatherImages/Atomosphere.png" alt="weather icon" class="weatherIcon">
-      <h1 class="temp">°F</h1>
-      <h2 class="state">State Name</h2>
-      <div class="details">
-        <div class="col">
-          <img src="/assets/images/weatherImages/Humidity.png" alt="test">
+      <h1 class="temp has-text-weight-bold is-size-3-mobile is-size-1-tablet is-size-1-desktop">°F</h1>
+      <h2 class="state is-size-5-mobile is-size-1-tablet is-size-1-desktop has-text-weight-bold">State Name</h2>
+      <div
+        class="details columns is-flex-direction-row is-justify-content-space-between is-align-content-center mt-5 px-5">
+        <div class="sub column has-text-left has-text-centered">
+          <img src="/assets/images/weatherImages/Humidity.png" alt="test" class="mr-1 has-text-centered">
           <div>
-            <p class="humidity">%</p>
+            <p class="humidity mt-0 is-size-4">%</p>
             <p>Humidity</p>
           </div>
         </div>
-        <div class="col">
-          <img src="/assets/images/weatherImages/Wind.png" alt="test">
+        <div class="sub column has-text-left has-text-centered">
+          <img src="/assets/images/weatherImages/Wind.png" alt="test" class="mr-1 has-text-centered">
           <div>
-            <p class="wind">mph</p>
+            <p class="wind mt-0 is-size-4">mph</p>
             <p>Wind Speed</p>
           </div>
           </div>
@@ -120,4 +130,5 @@
     <script src="/assets/js/weatherScript.js"></script>
     <script src="./assets/js/NPSScript.js"></script>
 </body>
+
 </html>
