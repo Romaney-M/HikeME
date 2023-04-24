@@ -21,28 +21,28 @@ async function checkWeather(state) {
     document.querySelector(".state").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°F";
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-    document.querySelector(".wind").innerHTML = data.wind.speed + "mph";
+    document.querySelector(".wind").innerHTML = Math.round(data.wind.speed) + "mph";
 
     if (data.weather[0].main == "Clouds") {
-        weatherIcon.src = "/assets/images/weatherImages/Clouds.png"
+        weatherIcon.src = "./assets/images/weatherImages/Clouds.png"
     }
     else if (data.weather[0].main == "Clear") {
-        weatherIcon.src = "/assets/images/weatherImages/Clear.png"
+        weatherIcon.src = "./assets/images/weatherImages/Clear.png"
     }
     else if (data.weather[0].main == "Rain") {
-        weatherIcon.src = "/assets/images/weatherImages/Rain.png"
+        weatherIcon.src = "./assets/images/weatherImages/Rain.png"
     }
     else if (data.weather[0].main == "Drizzle") {
-        weatherIcon.src = "/assets/images/weatherImages/Drizzle.png"
+        weatherIcon.src = "./assets/images/weatherImages/Drizzle.png"
     }
     else if (data.weather[0].main == "Atomosphere") {
-        weatherIcon.src = "/assets/images/weatherImages/Atomosphere.png"
+        weatherIcon.src = "./assets/images/weatherImages/Atomosphere.png"
     }
     else if (data.weather[0].main == "Snow") {
-        weatherIcon.src = "/assets/images/weatherImages/Snow.png"
+        weatherIcon.src = "./assets/images/weatherImages/Snow.png"
     }
     else if (data.weather[0].main == "Thunderstorm") {
-        weatherIcon.src = "/assets/images/weatherImages/Thunderstorm.png"
+        weatherIcon.src = "./assets/images/weatherImages/Thunderstorm.png"
     }
 
     /*for(i=0;i>imageName.length;i++){
