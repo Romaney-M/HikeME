@@ -26,3 +26,12 @@ body {
 .card {
     display: none;
 }
+
+.container {
+    display: flex;
+}
+
+#map {
+    justify-content: flex-end;
+    width: 60%;
+}

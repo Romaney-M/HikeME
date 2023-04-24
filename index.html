@@ -13,13 +13,14 @@
 </head>
 
 <body>
-    <h1 class="column has-background-success has-text-weight-bold is-size-1 has-text-centered has-text-white">✨ HikeME ✨</h1>
+  <h1 class="column has-background-success has-text-weight-bold is-size-1 has-text-centered has-text-white">✨ HikeME ✨
+  </h1>
   <div class="columns is-mobile has-text-centered">
     <div class="subTitle column is-two-fifths has-background-primary has-text-centered is-size-3" id="weather">
       🌈 Weather
     </div>
 
-    <div class="subTitle column has-background-warning has-text-centered is-size-3" id="map">
+    <div class="subTitle column has-background-warning has-text-centered is-size-3">
       Map 🗺️
     </div>
   </div>
@@ -82,79 +83,80 @@
     </div>
   </div>
 
-  <div style="display: flex; flex-direction: row;">
-  <div class="card py-6 px-4 has-text-centered">
-    <div class="weather">
-      <img src="./assets/images/weatherImages/Atomosphere.png" alt="weather icon" class="weatherIcon">
-      <h1 class="temp">°F</h1>
-      <h2 class="state">State Name</h2>
-      <div class="details">
-        <div class="col">
-          <img src="./assets/images/weatherImages/Humidity.png" alt="test">
-          <div>
-            <p class="humidity mt-0 is-size-4">%</p>
-            <p>Humidity</p>
-          </div>
-        </div>
-        <div class="sub column has-text-left has-text-centered">
-          <img src="./assets/images/weatherImages/Wind.png" alt="test" class="mr-1 has-text-centered">
-          <div>
-            <p class="wind mt-0 is-size-4">mph</p>
-            <p>Wind Speed</p>
+  <div class="container">
+    <div style="display: flex; flex-direction: row;">
+      <div class="card py-6 px-4 has-text-centered">
+        <div class="weather">
+          <img src="./assets/images/weatherImages/Atomosphere.png" alt="weather icon" class="weatherIcon">
+          <h1 class="temp">°F</h1>
+          <h2 class="state">State Name</h2>
+          <div class="details">
+            <div class="col">
+              <img src="./assets/images/weatherImages/Humidity.png" alt="test">
+              <div>
+                <p class="humidity mt-0 is-size-4">%</p>
+                <p>Humidity</p>
+              </div>
+            </div>
+            <div class="sub column has-text-left has-text-centered">
+              <img src="./assets/images/weatherImages/Wind.png" alt="test" class="mr-1 has-text-centered">
+              <div>
+                <p class="wind mt-0 is-size-4">mph</p>
+                <p>Wind Speed</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-    <div class="container">
-      <div id="map" class="column">
-        <div class="column is-three-fifths has-background-primary is-size-3">
-          <style>
-            #map {
-              height: 350px;
-              position: relative;
-              width: 100%;
-            }
-          </style>
+      <div class="container">
+        <div id="map" class="column">
+          <div class="column is-three-fifths has-background-primary is-size-3">
+            <style>
+              #map {
+                height: 350px;
+                position: relative;
+                width: 100%;
+              }
+            </style>
+          </div>
+
+          <script>
+            var NPMap = {
+              center: {
+                lat: 44.32,
+                lng: -110.42
+              },
+              div: 'map',
+              hooks: {
+                init: function (callback) {
+                  var bounds = NPMap.config.L.getBounds();
+                  window.L.npmap.layer.geojson({
+                    attribution: '<a href="https://www.mapillary.com">Mapillary</a>',
+                    popup: {
+                      description: '<img src="https://d1cuyjsrcm0gby.cloudfront.net/{{key}}/thumb-320.jpg" style="height:240px;width:320px;">'
+                    },
+                    url: 'https://a.mapillary.com/v2/search/im/geojson?client_id=REVmc0hVYk13NF82NDlGcDQ3VVI2Zzo1ZjljYTA2MTQ4NWI2ZjEx&max_lat=' + bounds.getNorth() + '&max_lon=' + bounds.getEast() + '&min_lat=' + bounds.getSouth() + '&min_lon=' + bounds.getWest() + '&limit=100&page=0'
+                  }).addTo(NPMap.config.L);
+                  callback();
+                }
+              },
+              zoom: 8
+            };
+
+            (function () {
+              var s = document.createElement('script');
+              s.src = 'https://www.nps.gov/lib/npmap.js/4.0.0/npmap-bootstrap.js';
+              document.body.appendChild(s);
+            })();
+
+          </script>
         </div>
-        
-        <script>
-        var NPMap = {
-          center: {
-            lat: 44.32,
-            lng: -110.42
-          },
-          div: 'map',
-          hooks: {
-            init: function (callback) {
-              var bounds = NPMap.config.L.getBounds();
-              window.L.npmap.layer.geojson({
-                attribution: '<a href="https://www.mapillary.com">Mapillary</a>',
-                popup: {
-                  description: '<img src="https://d1cuyjsrcm0gby.cloudfront.net/{{key}}/thumb-320.jpg" style="height:240px;width:320px;">'
-                },
-                url: 'https://a.mapillary.com/v2/search/im/geojson?client_id=REVmc0hVYk13NF82NDlGcDQ3VVI2Zzo1ZjljYTA2MTQ4NWI2ZjEx&max_lat=' + bounds.getNorth() + '&max_lon=' + bounds.getEast() + '&min_lat=' + bounds.getSouth() + '&min_lon=' + bounds.getWest() + '&limit=100&page=0'
-              }).addTo(NPMap.config.L);
-              callback();
-            }
-          },
-          zoom: 8
-        };
-
-        (function () {
-          var s = document.createElement('script');
-          s.src = 'https://www.nps.gov/lib/npmap.js/4.0.0/npmap-bootstrap.js';
-          document.body.appendChild(s);
-        })();
-
-      </script>
-    </div>
-  </div>
+      </div>
 
 
-    <script src="./assets/js/weatherScript.js"></script>
-    <script src="./assets/js/NPSScript.js"></script>
+      <script src="./assets/js/weatherScript.js"></script>
+      <script src="./assets/js/NPSScript.js"></script>
 </body>
 
 </html>
